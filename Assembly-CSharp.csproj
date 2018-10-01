@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{FADF1BF2-E34F-E2C4-262E-DC862F08A707}</ProjectGuid>
+    <ProjectGuid>{561FA648-31E9-6A44-D95C-09BD12AC2FB2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,19 +61,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\FollowCam.cs" />
-    <Compile Include="Assets\Scripts\Slingshot.cs" />
+    <Compile Include="Assets\_Scripts\Cloud.cs" />
+    <Compile Include="Assets\_Scripts\CloudCrafter.cs" />
+    <Compile Include="Assets\_Scripts\FollowCam.cs" />
+    <Compile Include="Assets\_Scripts\Goal.cs" />
+    <Compile Include="Assets\_Scripts\MissionDemolition.cs" />
+    <Compile Include="Assets\_Scripts\ProjectileLine.cs" />
+    <Compile Include="Assets\_Scripts\RigidbodySleep.cs" />
+    <Compile Include="Assets\_Scripts\Slingshot.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Medlink/Documents/GitHub/Mission_Demolition_Prototype--unfinished-/Mission_Demolition_Prototype/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Medlink/Documents/GitHub/Mission_Demolition_Prototype--unfinished-/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Medlink/Documents/GitHub/Mission_Demolition_Prototype--unfinished-/Mission_Demolition_Prototype/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Medlink/Documents/GitHub/Mission_Demolition_Prototype--unfinished-/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Medlink/Documents/GitHub/Mission_Demolition_Prototype--unfinished-/Mission_Demolition_Prototype/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Medlink/Documents/GitHub/Mission_Demolition_Prototype--unfinished-/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Medlink/Documents/GitHub/Mission_Demolition_Prototype--unfinished-/Mission_Demolition_Prototype/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Medlink/Documents/GitHub/Mission_Demolition_Prototype--unfinished-/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -8,11 +8,12 @@ public class FollowCam : MonoBehaviour {
     [Header("Set Dynamically")]
     public float easing = 0.05f;
     public float camZ;
+    public Vector2 minXY = Vector2.zero;
     
 
     void Awake()
     {
-        S = this;
+       
         camZ = this.transform.position.z;
     }
 
