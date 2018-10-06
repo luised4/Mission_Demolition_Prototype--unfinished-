@@ -23,6 +23,10 @@ public class Slingshot : MonoBehaviour {
             return S.launchPos;
         }
     }
+    public void Start()
+    {
+        Debug.Log("In start");
+    }
     void Awake()
     {
         S = this;
@@ -30,6 +34,8 @@ public class Slingshot : MonoBehaviour {
         launchPoint = launchPointTrans.gameObject;
         launchPoint.SetActive(false);
         launchPos = launchPointTrans.position;
+      //  Debug.Log("In awake");
+    
     }
     // Use this for initialization
     void OnMouseEnter () {
@@ -55,9 +61,10 @@ public class Slingshot : MonoBehaviour {
      void Update()
     {
         if (!aimingMode) return;
+       // Debug.Log("In update");
         Vector3 mousePos2D = Input.mousePosition;
         mousePos2D.z = -Camera.main.transform.position.z;
-       Vector3 mousePos3D=  -Camera.main.ScreenToWorldPoint(mousePos2D);
+       Vector3 mousePos3D=  Camera.main.ScreenToWorldPoint(mousePos2D);
 
         Vector3 mouseDelta = mousePos3D - launchPos;
 
@@ -76,7 +83,7 @@ public class Slingshot : MonoBehaviour {
             aimingMode = false;
             projectileRigidbody.isKinematic = false;
             projectileRigidbody.velocity = -mouseDelta * velocityMult;
-            projectile = null;
+           
             projectileRigidbody.velocity = -mouseDelta * velocityMult;
             FollowCam.POI = projectile;
             projectile = null;

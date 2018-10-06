@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FollowCam : MonoBehaviour {
-    static public GameObject POI;
+  
+    [Header("Set inspector")]
+      static public GameObject POI;
+
 
     [Header("Set Dynamically")]
     public float easing = 0.05f;
@@ -30,6 +33,7 @@ public class FollowCam : MonoBehaviour {
             destination = POI.transform.position;
             if (POI.tag == "Projectile")
             {
+                print("projectile");
                 if (POI.GetComponent<Rigidbody>().IsSleeping())
                 {
                     POI = null;

@@ -258,8 +258,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 200281250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
-  m_LocalScale: {x: 100, y: 1, z: 4}
+  m_LocalPosition: {x: 100, y: -10, z: 0}
+  m_LocalScale: {x: 400, y: 1, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -387,6 +387,8 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669908}
+  - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -448,12 +450,45 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &534669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7612a4f9e17acc46a0e32968eaee189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numClouds: 10
+  cloudPrefab: {fileID: 1297203656974148, guid: fdee0a04c3248fd4c9616968d9f3516b,
+    type: 2}
+  cloudPosMin: {x: 0, y: 0, z: 0}
+  cloudPosMax: {x: 0, y: 0, z: 0}
+  cloudScaleMin: 1
+  cloudScaleMax: 5
+  cloudSpeedMult: 0.5
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e211a6222f14ee4eb3450fc87bba5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  easing: 0.05
+  camZ: 0
+  minXY: {x: 0, y: 0}
 --- !u!114 &534669908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,7 +513,7 @@ MonoBehaviour:
   level: 1
   levelMax: 3
   shotsTaken: 5
-  castle: {fileID: 1057809162332870, guid: c6cea1d76d41e8f44b3bda53857e0fc3, type: 2}
+  castle: {fileID: 0}
   mode: 0
   showing: Slingshot
 --- !u!1 &545593160
@@ -563,9 +598,10 @@ GameObject:
   - component: {fileID: 559510534}
   - component: {fileID: 559510536}
   - component: {fileID: 559510535}
+  - component: {fileID: 559510537}
   m_Layer: 0
   m_Name: Slingshot
-  m_TagString: Projectile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,6 +646,24 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 4, z: 0}
+--- !u!114 &559510537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559510533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffaf5b876081064583a9b7e61be74c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabProjectile: {fileID: 1943754354645300, guid: becfa280fc935a9468b595a37e592bdc,
+    type: 2}
+  velocityMult: 8
+  launchPoint: {fileID: 667290975}
+  launchPos: {x: -10, y: -6, z: 0}
+  projectile: {fileID: 0}
+  aimingMode: 0
 --- !u!1 &560258632
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +803,7 @@ Halo:
   m_Color:
     serializedVersion: 2
     rgba: 4290756543
-  m_Size: 1
+  m_Size: 3
 --- !u!1 &956147873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,9 +1127,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114878839633982404, guid: 01aecf10c6ff74247a3c2c381c9d9694,
+        type: 2}
+      propertyPath: line
+      value: 
+      objectReference: {fileID: 1597134484}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01aecf10c6ff74247a3c2c381c9d9694, type: 2}
   m_IsPrefabAsset: 0
+--- !u!120 &1597134484 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 120696625778147612, guid: 01aecf10c6ff74247a3c2c381c9d9694,
+    type: 2}
+  m_PrefabInternal: {fileID: 1597134483}
 --- !u!1 &1859098394
 GameObject:
   m_ObjectHideFlags: 0

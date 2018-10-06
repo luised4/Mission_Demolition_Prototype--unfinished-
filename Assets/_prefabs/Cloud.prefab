@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1398634468903130}
+  m_RootGameObject: {fileID: 1297203656974148}
   m_IsPrefabAsset: 1
---- !u!1 &1398634468903130
+--- !u!1 &1297203656974148
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4920528654084016}
-  - component: {fileID: 114458759835905758}
+  - component: {fileID: 4005126003705454}
+  - component: {fileID: 114861599198750632}
   m_Layer: 0
   m_Name: Cloud
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4920528654084016
+--- !u!4 &4005126003705454
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1398634468903130}
+  m_GameObject: {fileID: 1297203656974148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,20 +40,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114458759835905758
+--- !u!114 &114861599198750632
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1398634468903130}
+  m_GameObject: {fileID: 1297203656974148}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e93f9651e6696064291f66229c8dc41e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloudSphere: {fileID: 0}
-  numSphereMin: 6
-  numSphereMax: 10
+  cloudSphere: {fileID: 1297203656974148}
+  numSpheresMin: 1
+  numSpheresMax: 2
   sphereOffsetScale: {x: 5, y: 2, z: 1}
   sphereScaleRangeX: {x: 4, y: 8}
   sphereScaleRangeY: {x: 3, y: 4}
