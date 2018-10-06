@@ -339,7 +339,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 322274496}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 534669908}
+        m_MethodName: SwitchView
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &322274496
@@ -462,7 +473,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7612a4f9e17acc46a0e32968eaee189, type: 3}
   m_Name: 
@@ -470,7 +481,7 @@ MonoBehaviour:
   numClouds: 10
   cloudPrefab: {fileID: 1297203656974148, guid: fdee0a04c3248fd4c9616968d9f3516b,
     type: 2}
-  cloudPosMin: {x: 0, y: 0, z: 0}
+  cloudPosMin: {x: 1, y: 1, z: 1}
   cloudPosMax: {x: 0, y: 0, z: 0}
   cloudScaleMin: 1
   cloudScaleMax: 5
@@ -1095,6 +1106,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 120696625778147612, guid: 01aecf10c6ff74247a3c2c381c9d9694,
+        type: 2}
+      propertyPath: m_Positions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4073762388872406, guid: 01aecf10c6ff74247a3c2c381c9d9694, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1132,6 +1148,26 @@ Prefab:
       propertyPath: line
       value: 
       objectReference: {fileID: 1597134484}
+    - target: {fileID: 120696625778147612, guid: 01aecf10c6ff74247a3c2c381c9d9694,
+        type: 2}
+      propertyPath: m_Positions.Array.data[1].z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 120696625778147612, guid: 01aecf10c6ff74247a3c2c381c9d9694,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0.103773594
+      objectReference: {fileID: 0}
+    - target: {fileID: 120696625778147612, guid: 01aecf10c6ff74247a3c2c381c9d9694,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.014195448
+      objectReference: {fileID: 0}
+    - target: {fileID: 120696625778147612, guid: 01aecf10c6ff74247a3c2c381c9d9694,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.014195448
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01aecf10c6ff74247a3c2c381c9d9694, type: 2}
   m_IsPrefabAsset: 0
