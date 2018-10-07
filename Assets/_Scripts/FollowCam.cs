@@ -41,12 +41,14 @@ public class FollowCam : MonoBehaviour {
                 }
             }
         }
+        destination = Vector3.Lerp(transform.position, destination, easing);
+
         destination.x = Mathf.Max(minXY.x, destination.x);
         destination.y = Mathf.Max(minXY.y, destination.y);
-        destination = Vector3.Lerp(transform.position, destination, easing);
+        
         destination.z = camZ;
         transform.position = destination;
-        this.GetComponent<Camera>().orthographicSize = destination.y + 10;
+        Camera.main.orthographicSize = destination.y + 10;
     }
 
     
