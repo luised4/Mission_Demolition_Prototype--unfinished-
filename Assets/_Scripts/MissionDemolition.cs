@@ -34,7 +34,7 @@ public class MissionDemolition : MonoBehaviour {
     public int shotsTaken;
     public GameObject castle;    // The current castle
     public GameMode mode = GameMode.idle;
-    public string showing = "Slingshot"; // FollowCam mode
+    public string showing = "Show Slingshot"; // FollowCam mode
 
     void Start()
     {
@@ -67,7 +67,7 @@ public class MissionDemolition : MonoBehaviour {
         shotsTaken = 0;
 
         // Reset the camera
-        SwitchView("Both");
+        SwitchView("Show Both");
         ProjectileLine.S.Clear();
 
         // Reset the goal
@@ -114,14 +114,16 @@ public class MissionDemolition : MonoBehaviour {
 
     public void SwitchView(string eView="")
     {
+        Debug.Log("in switch view: eview = "+ eView);
         if (eView == "")
         {
             eView = uiButton.text;
         }
 
+        showing = eView;
         switch (showing)
         {
-            case "Show slingshot":
+            case "Show Slingshot":
                 FollowCam.POI = null;
                 uiButton.text = "Show Castle";
                 break;
